@@ -16,8 +16,7 @@ class MBTALive:
         self.red_dict = self.process(self.url_red)
         self.orange_dict = self.process(self.url_orange)
         self.blue_dict = self.process(self.url_blue)
-
-
+        
     def process(self, url):
         request = urllib.request.urlopen(url)
         response = request.read().decode("utf-8")
@@ -46,7 +45,6 @@ class MBTALive:
                                             train["Time"],
                                             train["TimeRemaining"]
                                             ])
-
         return next_train_list
     
 
@@ -111,22 +109,5 @@ class Station:
             if this_line not in lines:
                 lines.append(this_line)
         return lines
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
